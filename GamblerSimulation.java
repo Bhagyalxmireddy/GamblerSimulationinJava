@@ -6,7 +6,7 @@ class GamblerSimulation
    static int Won=0;
    static int Loss=0;
    static int PERCENT=50;
-   static int DAYS=30;
+   static int DAYS=20;
    int Result;
    int Winning=0;
    int Lossing=0;
