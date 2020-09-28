@@ -74,6 +74,14 @@ class GamblerSimulation
                }
                 System.out.println("Number of Luckiest days of Gambler is:" +WIN);
                 System.out.println("Number of UnLuckiest days of Gambler is:" +LOSS);
+                if(WIN > LOSS)
+                {
+                 System.out.println("Gambler Won the Amount let's continue the game");
+                }
+                else
+                {
+                 System.out.println("GAmbler lossing the Amount let's Quit the game");
+                }
     return Result;
          }
 
