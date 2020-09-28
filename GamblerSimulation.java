@@ -49,13 +49,29 @@ class GamblerSimulation
                  }
                 else
                 {
-                    LOSSAMOUNT= STAKE - LOSSAMOUNT;
+                    LOSSAMOUNT=LOSSAMOUNT + STAKE;
                     LOSS=LOSS+1;
                 }
                  System.out.println("Amount of the day:" +days+ " is " +STAKE);
                 Amount=Amount + STAKE;
            }
-          System.out.println("total amount is:" +Amount);
+          System.out.println("Total amount is:" +Amount);
+          System.out.println("Total amount won after a month:" +WINAMOUNT);
+          System.out.println("Total amount loss after a month:" +LOSSAMOUNT);
+               if(TotalInvestment > Amount)
+                {
+                   int AmountLoss=TotalInvestment - Amount;
+                   System.out.println("Amount loss is:" +AmountLoss);
+                }
+                else if(TotalInvestment == Amount)
+               {
+                    System.out.println("No amount was win or loss");
+               }
+               else
+               {
+                  int AmountWon=Amount - TotalInvestment;
+                   System.out.println("Amount won is:" +AmountWon);
+               }
     return Result;
          }
 
