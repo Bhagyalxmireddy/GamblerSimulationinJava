@@ -5,10 +5,19 @@ class GamblerSimulation
    static int BET=1;
    static int Won=0;
    static int Loss=0;
-   int value;
+   static int PERCENT=50;
+   int Result;
+   int Winning=0;
+   int Lossing=0;
 
          public int GamblerGame()
         {
+          int VALUE=STAKE * PERCENT;
+           VALUE=VALUE / 100;
+           Winning=STAKE + VALUE;
+           System.out.println("The Winning value is:" +Winning);
+           Lossing=STAKE - VALUE;
+           System.out.println("The Lossing value is:" +Lossing);
           int BettingToss=(int)Math.floor(Math.random()*10)%2;
             if(BettingToss == 1)
             {
@@ -18,7 +27,7 @@ class GamblerSimulation
             {
              STAKE=STAKE-BET;
             }
-    return value;
+    return Result;
          }
 
 
