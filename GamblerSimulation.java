@@ -2,10 +2,10 @@ import java.util.*;
 class GamblerSimulation
 {
    static int STAKE=100;
-   static int BET=1;
+   static final int BET=1;
+   static final int PERCENT=50;
    static int Won=0;
    static int Loss=0;
-   static int PERCENT=50;
    static int DAYS=30;
    int Result;
    int Winning=0;
