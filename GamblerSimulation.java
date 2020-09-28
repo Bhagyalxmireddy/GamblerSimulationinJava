@@ -72,6 +72,8 @@ class GamblerSimulation
                   int AmountWon=Amount - TotalInvestment;
                    System.out.println("Amount won is:" +AmountWon);
                }
+                System.out.println("Number of Luckiest days of Gambler is:" +WIN);
+                System.out.println("Number of UnLuckiest days of Gambler is:" +LOSS);
     return Result;
          }
 
