@@ -96,16 +96,11 @@ class GamblerSimulation
                  System.out.println("GAmbler lossing the Amount let's Quit the game");
                 }
 
-           //return value;
+           return value;
+        public static void main(String args[]){
+          System.out.println("Welcome to GamblerSimulation");
+          GamblerSimulation player = new GamblerSimulation();
+          player.gamePlayed();
         }
 
-       return value;
-       public static void main(String args[])
-        {
-            System.out.println("Welcome to GamblerSimulation");   
-            GamblerSimulation played = new GamblerSimulation();
-            played.gamblerGame();
-        }
-       // return value;
 }
-
