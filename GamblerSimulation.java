@@ -44,17 +44,17 @@ class GamblerSimulation
             	   		System.out.println(" gambler loss " +Stake);
             		}
                      }
-                	if(STAKE == 150)
+                	if(Stake == 150)
                  	{
-                     		winamount = winamount + STAKE;
+                     		winamount = winamount + Stake;
                      		Win=Win+1;
                  	}
                 	else
                 	{
-                    		lossamount = STAKE - lossamount;
+                    		lossamount = Stake - lossamount;
                     		Loss=Loss+1;
                 	}
-  		               System.out.println("Amount of the day:" +days+ " is " +STAKE);
+  		               System.out.println("Amount of the day:" +days+ " is " +Stake);
                 		Amount=Amount + STAKE;
            	}
           		System.out.println("total amount used during the game is:" +Amount);
