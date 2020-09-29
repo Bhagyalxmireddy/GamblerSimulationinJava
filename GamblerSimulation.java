@@ -16,8 +16,13 @@ class GamblerSimulation
    int LOSS=0; 
    int Amount=0;
    int days;
+   static int STAKE = 100;
+   static int BET = 1;
+   static int Won = 0;
+   static int Loss = 0;
+   int value;
 
-         public int GamblerGame()
+         public int gamblerGame()
         {
               int VALUE=STAKE * PERCENT;
                  VALUE=VALUE / 100;
@@ -29,6 +34,7 @@ class GamblerSimulation
             System.out.println("TotalInvestment is:" +TotalInvestment);
            for(days=1;days<=DAYS;days++)
             {
+
               STAKE=100;
               while( STAKE > Lossing && STAKE < Winning )
                {
@@ -86,11 +92,23 @@ class GamblerSimulation
         }
 
 
+             STAKE=STAKE+BET;
+            System.out.println(" gamler won " +STAKE);
+            }
+            else
+            {
+             STAKE=STAKE-BET;
+            System.out.println(" gambler loss " +STAKE);
+            }
+    return value;
+         }
+
+
 
         public static void main(String args[])
        {
           System.out.println("Welcome to GamblerSimulation");   
             GamblerSimulation played=new GamblerSimulation();
-              played.GamblerGame();
+              played.gamblerGame();
         }
 }
