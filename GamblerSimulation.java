@@ -1,10 +1,11 @@
 import java.util.*;
 class GamblerSimulation
 {
-	static final int STAKE = 100;
+   	static final int STAKE = 100;
    	static final int BET = 1;
    	static int Won = 0;
         static int Loss = 0;
+        static int DAYS = 30;
         int value;
         int Stake;
 	static int PERCENT = 50;
@@ -28,7 +29,10 @@ class GamblerSimulation
                 System.out.println("TotalInvestment is:" +TotalInvestment);
                 for(days=1; days<=DAYS; days++)
                  {
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
                      while(STAKE > Lossing && STAKE < Winning)
                       {
                   	int bettingToss = (int)Math.floor(Math.random()*10)%2;
@@ -56,7 +60,11 @@ class GamblerSimulation
                 		Amount=Amount + STAKE;
            	}
           		System.out.println("total amount used during the game is:" +Amount);
+<<<<<<< HEAD
 			System.out.println("Total amount won after a month:" +WINAMOUNT);
+=======
+	                System.out.println("Total amount won after a month:" +WINAMOUNT);
+>>>>>>> master
           		System.out.println("Total amount loss after a month:" +LOSSAMOUNT);
                		if(TotalInvestment > Amount)
                 	{
@@ -72,17 +80,30 @@ class GamblerSimulation
                   		int AmountWon=Amount - TotalInvestment;
                    		System.out.println("Amount won is:" +AmountWon);
                		}
+<<<<<<< HEAD
 
 
     		return Result;
+=======
+                		System.out.println("Number of Luckiest days of Gambler is:" +WIN);
+                		System.out.println("Number of UnLuckiest days of Gambler is:" +LOSS);
+		                if(WIN > LOSS)
+                		{
+                 			System.out.println("Gambler Won the Amount let's continue the game");
+                		}
+                		else
+                		{
+                 			System.out.println("GAmbler lossing the Amount let's Quit the game");
+                		}
+    					return Result;
          }
-             //return Result;
         public static void main(String args[])
         {
         	System.out.println("Welcome to GamblerSimulation");   
             	GamblerSimulation played = new GamblerSimulation();
               	played.gamblerGame();
         }
-  //return Result;
+ 
 }
+
 
