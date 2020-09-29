@@ -36,12 +36,12 @@ class GamblerSimulation
             		if(bettingToss == 1)
             		{
                    		Stake = STAKE + BET;
-                   		System.out.println(" gamler won " +Stake);
+                   		//System.out.println(" gamler won " +Stake);
             		}
                 	else
                 	{
                    		Stake = STAKE - BET;
-            	   		System.out.println(" gambler loss " +Stake);
+            	   		//System.out.println(" gambler loss " +Stake);
             		}
                      }
                 	if(Stake == 150)
@@ -76,7 +76,18 @@ class GamblerSimulation
                		}
 				System.out.println("Number of Luckiest days of Gambler is:" +Win);
 				System.out.println("Number of UnLuckiest days of Gambler is:" +Loss);
-
+			if(Win > Loss)
+			{ 
+				int Continue = 1;
+				int Quit = 0;
+				System.out.println("Gambler winnning the Amount ");
+                              	System.out.println(" Please enter your choice: " );
+                               
+			}
+			else
+			{
+                           System.out.println("Gambler lossing the amount let's quit the game");
+			}
 
     		return Result;
          }
