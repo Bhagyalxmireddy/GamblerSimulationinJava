@@ -1,11 +1,7 @@
 import java.util.*;
 class GamblerSimulation
 {
-
-   static int DAYS=30;
-   int Result;
-   int Winning=0;
-   int Lossing=0;
+   static int DAYS=20;
    int WINAMOUNT=0;
    int LOSSAMOUNT=0;
    int WIN=0;
@@ -21,7 +17,8 @@ class GamblerSimulation
    int Result;
    int Winning = 0;
    int Lossing = 0;
-
+   int Value ;
+//   int BettingToss;
 
          public int gamblerGame()
         {
@@ -34,13 +31,12 @@ class GamblerSimulation
              int TotalInvestment = STAKE * DAYS;
             System.out.println("TotalInvestment is:" +TotalInvestment);
            for(days=1;days<=DAYS;days++)
-            {
-
-              STAKE=100;
-              while( STAKE > Lossing && STAKE < Winning )
+            { 
+                STAKE=100;
+               while( STAKE > Lossing && STAKE < Winning )
                {
-                    double BettingToss=Math.floor(Math.random()*10)%2;
-                    if(BettingToss == 1)
+                     double  BettingToss = Math.floor(Math.random()*10)%2;
+                    if( BettingToss == 1)
                     {
                        STAKE=STAKE+BET;
                       System.out.println(" gamler won " +STAKE);
@@ -66,6 +62,7 @@ class GamblerSimulation
                  System.out.println("Amount of the day:" +days+ " is " +STAKE);
                 Amount=Amount + STAKE;
            }
+
           System.out.println("Total amount is:" +Amount);
           System.out.println("Total amount won after a month:" +WINAMOUNT);
           System.out.println("Total amount loss after a month:" +LOSSAMOUNT);
@@ -93,19 +90,19 @@ class GamblerSimulation
                 {
                  System.out.println("GAmbler lossing the Amount let's Quit the game");
                 }
-    return Result;
+//          System.out.println("total amount used during the game is:" +Amount);
+
+   
         }
 
-
-    return value;
-         }
-
-
+    //return value;
 
         public static void main(String args[])
        {
           System.out.println("Welcome to GamblerSimulation");   
-            GamblerSimulation played=new GamblerSimulation();
+            GamblerSimulation played = new GamblerSimulation();
               played.gamblerGame();
         }
+  return value;
 }
+
