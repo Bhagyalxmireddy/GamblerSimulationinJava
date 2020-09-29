@@ -61,7 +61,7 @@ class GamblerSimulation
         public static void main(String args[])
         {
         	System.out.println("Welcome to GamblerSimulation");   
-            	GamblerSimulation played=new GamblerSimulation();
+            	GamblerSimulation played = new GamblerSimulation();
               	played.gamblerGame();
         }
   //return Result;
