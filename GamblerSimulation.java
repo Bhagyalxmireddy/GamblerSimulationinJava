@@ -1,7 +1,7 @@
 import java.util.*;
 class GamblerSimulation
 {
-   static final int PERCENT=50;
+
    static int DAYS=30;
    int Result;
    int Winning=0;
@@ -17,6 +17,11 @@ class GamblerSimulation
    static int Won = 0;
    static int Loss = 0;
    int value;
+   static final int PERCENT = 50;
+   int Result;
+   int Winning = 0;
+   int Lossing = 0;
+
 
          public int gamblerGame()
         {
