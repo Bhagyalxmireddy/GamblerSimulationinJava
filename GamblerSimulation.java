@@ -28,12 +28,13 @@ class GamblerSimulation
            System.out.println("The Lossing value is:" +Lossing);
              int TotalInvestment = STAKE * DAYS;
             System.out.println("TotalInvestment is:" +TotalInvestment);
+          
            for(days=1;days<=DAYS;days++)
             {
-        
+               STAKE = 100;        
               while( STAKE > Lossing && STAKE < Winning )
                {
-                     double  BettingToss = Math.floor(Math.random()*10)%2;
+                     double BettingToss = Math.floor(Math.random()*10)%2;
                     if( BettingToss == 1)
                     {
                        STAKE=STAKE+BET;
