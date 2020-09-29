@@ -18,7 +18,6 @@ class GamblerSimulation
    int Winning = 0;
    int Lossing = 0;
    int Value ;
-//   int BettingToss;
 
          public int gamblerGame()
         {
@@ -32,15 +31,12 @@ class GamblerSimulation
             System.out.println("TotalInvestment is:" +TotalInvestment);
           
            for(days=1;days<=DAYS;days++)
-<<<<<<< HEAD
             { 
                 STAKE=100;
                while( STAKE > Lossing && STAKE < Winning )
-=======
             {
                STAKE = 100;        
               while( STAKE > Lossing && STAKE < Winning )
->>>>>>> UC4_Totalamountafter20days
                {
                      double BettingToss = Math.floor(Math.random()*10)%2;
                     if( BettingToss == 1)
@@ -99,19 +95,17 @@ class GamblerSimulation
                 {
                  System.out.println("GAmbler lossing the Amount let's Quit the game");
                 }
-//          System.out.println("total amount used during the game is:" +Amount);
 
-return value;   
+           //return value;
         }
 
-//    return value;
-
-        public static void main(String args[])
-       {
-          System.out.println("Welcome to GamblerSimulation");   
+       return value;
+       public static void main(String args[])
+        {
+            System.out.println("Welcome to GamblerSimulation");   
             GamblerSimulation played = new GamblerSimulation();
-              played.gamblerGame();
+            played.gamblerGame();
         }
-  //return value;
+       // return value;
 }
 
