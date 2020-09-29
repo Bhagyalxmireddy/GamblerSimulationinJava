@@ -1,11 +1,7 @@
 import java.util.*;
 class GamblerSimulation
 {
-   static int STAKE=100;
-   static final int BET=1;
    static final int PERCENT=50;
-   static int Won=0;
-   static int Loss=0;
    static int DAYS=30;
    int Result;
    int Winning=0;
@@ -42,10 +38,14 @@ class GamblerSimulation
                     if(BettingToss == 1)
                     {
                        STAKE=STAKE+BET;
+                      System.out.println(" gamler won " +STAKE);
+
                     }
                      else
                     {
                        STAKE=STAKE-BET;
+                       System.out.println(" gamler loss " +STAKE);
+
                      }
                }
                 if(STAKE == 150)
@@ -92,14 +92,6 @@ class GamblerSimulation
         }
 
 
-             STAKE=STAKE+BET;
-            System.out.println(" gamler won " +STAKE);
-            }
-            else
-            {
-             STAKE=STAKE-BET;
-            System.out.println(" gambler loss " +STAKE);
-            }
     return value;
          }
 
