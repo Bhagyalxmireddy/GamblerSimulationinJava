@@ -64,6 +64,8 @@ class GamblerSimulation
            }
 
           System.out.println("Total amount is:" +Amount);
+
+          System.out.println("Total amount used during game is:" +Amount)
           System.out.println("Total amount won after a month:" +WINAMOUNT);
           System.out.println("Total amount loss after a month:" +LOSSAMOUNT);
                if(TotalInvestment > Amount)
