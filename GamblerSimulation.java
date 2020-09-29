@@ -92,10 +92,10 @@ class GamblerSimulation
                 }
 //          System.out.println("total amount used during the game is:" +Amount);
 
-   
+return value;   
         }
 
-    //return value;
+//    return value;
 
         public static void main(String args[])
        {
@@ -103,6 +103,6 @@ class GamblerSimulation
             GamblerSimulation played = new GamblerSimulation();
               played.gamblerGame();
         }
-  return value;
+  //return value;
 }
 
