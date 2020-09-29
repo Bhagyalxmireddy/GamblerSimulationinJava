@@ -83,7 +83,10 @@ class GamblerSimulation
                  System.out.println("GAmbler lossing the Amount let's Quit the game");
                 }
     return Result;
-         }
+        }
+   static final int STAKE = 100;
+   static final int BET = 1;
+
 
 
         public static void main(String args[])
