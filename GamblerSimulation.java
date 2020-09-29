@@ -1,16 +1,16 @@
 import java.util.*;
 class GamblerSimulation
 {
-   static int STAKE=100;
-   static int BET=1;
-   static int Won=0;
-   static int Loss=0;
-   static int PERCENT=50;
+   static int STAKE = 100;
+   static int BET = 1;
+   static int Won = 0;
+   static int Loss = 0;
+   static int PERCENT = 50;
    int Result;
-   int Winning=0;
-   int Lossing=0;
+   int Winning = 0;
+   int Lossing = 0;
 
-         public int GamblerGame()
+         public int gamblerGame()
         {
           int VALUE=STAKE * PERCENT;
            VALUE=VALUE / 100;
@@ -35,6 +35,6 @@ class GamblerSimulation
        {
           System.out.println("Welcome to GamblerSimulation");   
             GamblerSimulation played=new GamblerSimulation();
-              played.GamblerGame();
+              played.gamblerGame();
         }
 }
