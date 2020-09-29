@@ -84,8 +84,6 @@ class GamblerSimulation
                 }
     return Result;
         }
-   static final int STAKE = 100;
-   static final int BET = 1;
 
 
 
