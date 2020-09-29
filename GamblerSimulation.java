@@ -1,6 +1,13 @@
 import java.util.*;
 class GamblerSimulation
 {
+   static final int STAKE = 100;
+   static final int BET = 1;
+   static int Won = 0;
+   static int Loss = 0;
+   int value;
+   int Stake;
+
    static int DAYS=20;
    int WINAMOUNT=0;
    int LOSSAMOUNT=0;
@@ -10,14 +17,12 @@ class GamblerSimulation
    int days;
    static int STAKE = 100;
    static int BET = 1;
-   static int Won = 0;
-   static int Loss = 0;
-   int value;
    static final int PERCENT = 50;
    int Result;
    int Winning = 0;
    int Lossing = 0;
-   int Value ;
+
+
 
          public int gamblerGame()
         {
@@ -38,20 +43,18 @@ class GamblerSimulation
                STAKE = 100;        
               while( STAKE > Lossing && STAKE < Winning )
                {
-                     double BettingToss = Math.floor(Math.random()*10)%2;
-                    if( BettingToss == 1)
-                    {
-                       STAKE=STAKE+BET;
-                      System.out.println(" gamler won " +STAKE);
+                 int bettingToss = (int)Math.floor(Math.random()*10)%2; 
+                if(bettingToss == 1)
+                {
+                   Stake = STAKE + BET;
+                   System.out.println(" gamler won " +Stake);
+                }
+                else
+                {
+                   Stake = STAKE - BET;
+                   System.out.println(" gambler loss " +Stake);
+                }
 
-                    }
-                     else
-                    {
-                       STAKE=STAKE-BET;
-                       System.out.println(" gamler loss " +STAKE);
-
-                     }
-               }
                 if(STAKE == 150)
                  {
                      WINAMOUNT=WINAMOUNT + STAKE;
@@ -65,6 +68,28 @@ class GamblerSimulation
                  System.out.println("Amount of the day:" +days+ " is " +STAKE);
                 Amount=Amount + STAKE;
            }
+	static final int STAKE = 100;
+	static final int BET = 1;
+	static int Won = 0;
+   	static int Loss = 0;
+   	int value;
+   	int Stake;
+
+         public int gamblerGame()
+         {
+          	int bettingToss = (int)Math.floor(Math.random()*10)%2;
+            	if(bettingToss == 1)
+            	{
+                   Stake = STAKE + BET;
+                   System.out.println(" gamler won " +Stake);
+            	}
+                else
+                {
+                   Stake = STAKE - BET;
+            	   System.out.println(" gambler loss " +Stake);
+            	}
+    		return value;
+         }
 
           System.out.println("Total amount is:" +Amount);
 
