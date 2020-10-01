@@ -1,6 +1,4 @@
-import java.util.*;
-class GamblerSimulation
-{
+import java.util.*; class GamblerSimulation {
 	static final int STAKE = 100;
    	static final int BET = 1;
 	static final int PERCENT = 50;
@@ -14,7 +12,7 @@ class GamblerSimulation
         int winning = 0;
         int lossing = 0;
 	int value;
-        int stake;
+        int stake ;
         int result;
 
          public int gamblerGame()
@@ -29,34 +27,37 @@ class GamblerSimulation
                 System.out.println("TotalInvestment is:" +totalInvestment);
                 for(days=1; days<=DAYS; days++)
                  {
-			stake = 100;
                  	while(STAKE > lossing && STAKE < winning)
 			{
 		          	int bettingToss = (int)Math.floor(Math.random()*10)%2;
             			if(bettingToss == 1)
             			{
                    			stake = STAKE + BET;
-                   			System.out.println(" gamler won and stake value is:" +stake);
+//                   			System.out.println(" gamler won and stake value is:" +stake);
             			}
                 		else
                 		{
                    			stake = STAKE - BET;
-            	   			System.out.println(" gambler loss and stake value is:" +stake);
+  //          	   			System.out.println(" gambler loss and stake value is:" +stake);
             			}
 			}
 			if(STAKE == 150)
                         {
-                                winamount = winamount + stake;
+                                winamount = winamount + STAKE;
                                	won = won + 1;
                         }
                         else
                         {
-                         	lossamount = stake - lossamount;
+                         	lossamount = STAKE - lossamount;
                                 loss = loss+1;
                         }
-                        System.out.println("Amount of the day:" +days+ " is " +stake);
-			amount = amount + stake;
+
+			System.out.println("Amount of the day:" +days+ " is " +STAKE);
+			 amount = amount + STAKE;
+
 		}
+//                System.out.println("Amount of the day:" +days+ " is " +stake);
+//		amount = amount + stake;
 		System.out.println("total amount used during the game is:" +amount);
     		return result;
         }
