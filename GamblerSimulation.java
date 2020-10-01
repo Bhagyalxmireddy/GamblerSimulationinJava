@@ -9,7 +9,6 @@ class GamblerSimulation
         int value;
         int Stake;
 	static int PERCENT = 50;
- 	static int DAYS = 30;
         int Result;
         int Winning = 0;
         int Lossing = 0;
@@ -17,6 +16,8 @@ class GamblerSimulation
         int loss = 0;
 	int Amount = 0;
 	int days = 0;
+	int winamount = 0;
+	int lossamount = 0;
          public int gamblerGame()
           {
           	int VALUE=STAKE * PERCENT;
@@ -37,11 +38,12 @@ class GamblerSimulation
                    		Stake = STAKE + BET;
                    		System.out.println(" gamler won " +Stake);
             		}
-                	else
+	   		else
                 	{
                    		Stake = STAKE - BET;
             	   		System.out.println(" gambler loss " +Stake);
             		}
+		      }
                 	if(STAKE == 150)
                  	{
                      		winamount = winamount + STAKE;
@@ -50,14 +52,14 @@ class GamblerSimulation
                 	else
                 	{
                     		lossamount = STAKE - lossamount;
-                    		Loss=Loss+1;
+                    		loss=loss+1;
                 	}
   		               System.out.println("Amount of the day:" +days+ " is " +STAKE);
                 		Amount=Amount + STAKE;
            	}
           		System.out.println("total amount used during the game is:" +Amount);
-	                System.out.println("Total amount won after a month:" +WINAMOUNT);
-          		System.out.println("Total amount loss after a month:" +LOSSAMOUNT);
+	                System.out.println("Total amount won after a month:" +winamount);
+          		System.out.println("Total amount loss after a month:" +lossamount);
                		if(TotalInvestment > Amount)
                 	{
                    		int AmountLoss=TotalInvestment - Amount;
