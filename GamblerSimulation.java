@@ -5,7 +5,7 @@ class GamblerSimulation
 	static final int BET = 1;
 	static int Won = 0;
    	static int Loss = 0;
-   	int value;
+   	int result;
    	int Stake;
 
          public int gamblerGame()
@@ -21,7 +21,7 @@ class GamblerSimulation
                    Stake = STAKE - BET;
             	   System.out.println(" gambler loss " +Stake);
             	}
-    		return value;
+    		return result;
          }
 
 
