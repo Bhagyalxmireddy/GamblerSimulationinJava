@@ -3,7 +3,7 @@ class GamblerSimulation
 {
 	static final int STAKE = 100;
    	static final int BET = 1;
-	static final int PERCENT =50;
+	static final int PERCENT = 50;
    	static int Won = 0;
         static int Loss = 0;
         int winning = 0;
