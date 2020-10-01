@@ -1,13 +1,13 @@
 import java.util.*;
 class GamblerSimulation
 {
-   	static final int STAKE = 100;
+   	static  int STAKE = 100;
    	static final int BET = 1;
    	static int Won = 0;
         static int Loss = 0;
         static int DAYS = 30;
         int value;
-        int Stake;
+        int Stake = 100;
 	static int PERCENT = 50;
         int Result;
         int Winning = 0;
@@ -30,18 +30,19 @@ class GamblerSimulation
                 System.out.println("TotalInvestment is:" +TotalInvestment);
                 for(days=1; days<=DAYS; days++)
                  {
+ 		    STAKE = 100;
                      while(STAKE > Lossing && STAKE < Winning)
                       {
                   	int bettingToss = (int)Math.floor(Math.random()*10)%2;
             		if(bettingToss == 1)
             		{
-                   		Stake = STAKE + BET;
-                   		System.out.println(" gamler won " +Stake);
+                   		STAKE = STAKE + BET;
+//                   		System.out.println(" gamler won " +Stake);
             		}
 	   		else
                 	{
-                   		Stake = STAKE - BET;
-            	   		System.out.println(" gambler loss " +Stake);
+                   		STAKE = STAKE - BET;
+  //          	   		System.out.println(" gambler loss " +Stake);
             		}
 		      }
                 	if(STAKE == 150)
