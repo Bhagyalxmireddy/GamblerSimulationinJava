@@ -29,6 +29,7 @@ class GamblerSimulation
                 System.out.println("TotalInvestment is:" +totalInvestment);
                 for(days=1; days<=DAYS; days++)
                  {
+			stake = 100;
                  	while(STAKE > lossing && STAKE < winning)
 			{
 		          	int bettingToss = (int)Math.floor(Math.random()*10)%2;
@@ -45,16 +46,16 @@ class GamblerSimulation
 			}
 			if(STAKE == 150)
                         {
-                                winamount = winamount + STAKE;
+                                winamount = winamount + stake;
                                	won = won + 1;
                         }
                         else
                         {
-                         	lossamount = STAKE - lossamount;
+                         	lossamount = stake - lossamount;
                                 loss = loss+1;
                         }
-                        System.out.println("Amount of the day:" +days+ " is " +STAKE);
-			amount = amount + STAKE;
+                        System.out.println("Amount of the day:" +days+ " is " +stake);
+			amount = amount + stake;
 		}
 		System.out.println("total amount used during the game is:" +amount);
     		return result;
