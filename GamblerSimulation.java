@@ -3,41 +3,40 @@ class GamblerSimulation
 {
 	static final int STAKE = 100;
    	static final int BET = 1;
+	static final int PERCENT =50;
    	static int Won = 0;
         static int Loss = 0;
-        int value;
-        int Stake;
-	static int PERCENT = 50;
-        int Result;
-        int Winning = 0;
-        int Lossing = 0;
+        int winning = 0;
+        int lossing = 0;
+	int value;
+        int stake;
+        int result;
 
          public int gamblerGame()
           {
-          	int VALUE=STAKE * PERCENT;
-           	VALUE=VALUE / 100;
-           	Winning=STAKE + VALUE;
-           	System.out.println("The Winning value is:" +Winning);
-           	Lossing=STAKE - VALUE;
-           	System.out.println("The Lossing value is:" +Lossing);
+          	int value = STAKE * PERCENT;
+           	value = value / 100;
+           	winning = STAKE + value;
+           	System.out.println("The Winning value is:" +winning);
+           	lossing = STAKE - value;
+           	System.out.println("The Lossing value is:" +lossing);
           	int bettingToss = (int)Math.floor(Math.random()*10)%2;
             	if(bettingToss == 1)
             	{
-                   Stake = STAKE + BET;
-                   System.out.println(" gamler won " +Stake);
+                   stake = STAKE + BET;
+                   System.out.println(" gamler won and stake value is:" +stake);
             	}
                 else
                 {
-                   Stake = STAKE - BET;
-            	   System.out.println(" gambler loss " +Stake);
+                   stake = STAKE - BET;
+            	   System.out.println(" gambler loss and stake value is:" +stake);
             	}
-    		return value;
-         }
-
-
-        public static void main(String args[]){
-          System.out.println("Welcome to GamblerSimulation");   
-            GamblerSimulation played=new GamblerSimulation();
-              played.gamblerGame();
+    		return result;
+        }
+	public static void main(String args[])
+	{
+        	System.out.println("Welcome to GamblerSimulation");   
+            	GamblerSimulation played=new GamblerSimulation();
+              	played.gamblerGame();
         }
 }
