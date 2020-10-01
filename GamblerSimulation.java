@@ -14,12 +14,12 @@ class GamblerSimulation
             	if(bettingToss == 1)
             	{
                    stake = STAKE + BET;
-                   System.out.println(" gamler won " +stake);
+                   System.out.println(" gamler won and stake value is:" +stake);
             	}
                 else
                 {
                    stake = STAKE - BET;
-            	   System.out.println(" gambler loss " +stake);
+            	   System.out.println(" gambler loss and stake value is:" +stake);
             	}
     		return value;
         }
