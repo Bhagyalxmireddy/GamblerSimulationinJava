@@ -36,12 +36,12 @@ class GamblerSimulation
             		if(bettingToss == 1)
             		{
                    		Stake = STAKE + BET;
-                   		System.out.println(" gamler won " +Stake);
+                   		//System.out.println(" gamler won " +Stake);
             		}
                 	else
                 	{
                    		Stake = STAKE - BET;
-            	   		System.out.println(" gambler loss " +Stake);
+            	   		//System.out.println(" gambler loss " +Stake);
             		}
                      }
                 	if(Stake == 150)
@@ -55,7 +55,7 @@ class GamblerSimulation
                     		Loss=Loss+1;
                 	}
   		               System.out.println("Amount of the day:" +days+ " is " +Stake);
-                		Amount=Amount + STAKE;
+                		Amount=Amount + Stake;
            	}
           		System.out.println("total amount used during the game is:" +Amount);
 	                System.out.println("Total amount won after a month:" +winamount);
