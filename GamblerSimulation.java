@@ -3,67 +3,67 @@ class GamblerSimulation
 {
 	static final int STAKE = 100;
    	static final int BET = 1;
-   	static int Won = 0;
-        static int Loss = 0;
-        int value;
-        int Stake;
-	static int PERCENT = 50;
-        int Result;
-        int Winning = 0;
-        int Lossing = 0;
-        int Win = 0;
-        int loss = 0;
-	int Amount = 0;
+	static final int PERCENT = 50;
+	static final int DAYS = 20;
+ 	static int won = 0;
+        static int loss = 0;
+ 	int winamount = 0;
+	int lossamount = 0;
+	int amount = 0;
 	int days = 0;
+        int winning = 0;
+        int lossing = 0;
+	int value;
+        int stake;
+        int result;
+
          public int gamblerGame()
           {
-          	int VALUE=STAKE * PERCENT;
-           	VALUE=VALUE / 100;
-           	Winning=STAKE + VALUE;
-           	System.out.println("The Winning value is:" +Winning);
-           	Lossing=STAKE - VALUE;
-           	System.out.println("The Lossing value is:" +Lossing);
-                int TotalInvestment = STAKE * DAYS;
-                System.out.println("TotalInvestment is:" +TotalInvestment);
-                for(days=1; days<=20; days++)
+          	value = STAKE * PERCENT;
+           	value = value / 100;
+           	winning = STAKE + value;
+           	System.out.println("The Winning value is:" +winning);
+           	lossing = STAKE - value;
+           	System.out.println("The Lossing value is:" +lossing);
+		int totalInvestment = STAKE * DAYS;
+                System.out.println("TotalInvestment is:" +totalInvestment);
+                for(days=1; days<=DAYS; days++)
                  {
-                     while(STAKE > Lossing && STAKE < Winning)
-                      {
-                  	int bettingToss = (int)Math.floor(Math.random()*10)%2;
-            		if(bettingToss == 1)
-            		{
-                   		Stake = STAKE + BET;
-                   		System.out.println(" gamler won " +Stake);
-            		}
-                	else
-                	{
-                   		Stake = STAKE - BET;
-            	   		System.out.println(" gambler loss " +Stake);
-            		}
-                	if(STAKE == 150)
-                 	{
-                     		winamount = winamount + STAKE;
-                     		Win=Win+1;
-                 	}
-                	else
-                	{
-                    		lossamount = STAKE - lossamount;
-                    		Loss=Loss+1;
-                	}
-  		               System.out.println("Amount of the day:" +days+ " is " +STAKE);
-                		Amount=Amount + STAKE;
-           	}
-          		System.out.println("total amount used during the game is:" +Amount);
-
-    		return Result;
-         }
-             //return Result;
-        public static void main(String args[])
-        {
+                 	while(STAKE > lossing && STAKE < winning)
+			{
+		          	int bettingToss = (int)Math.floor(Math.random()*10)%2;
+            			if(bettingToss == 1)
+            			{
+                   			stake = STAKE + BET;
+                   			System.out.println(" gamler won and stake value is:" +stake);
+            			}
+                		else
+                		{
+                   			stake = STAKE - BET;
+            	   			System.out.println(" gambler loss and stake value is:" +stake);
+            			}
+			}
+			if(STAKE == 150)
+                        {
+                                winamount = winamount + STAKE;
+                               	won = won + 1;
+                        }
+                        else
+                        {
+                         	lossamount = STAKE - lossamount;
+                                loss = loss+1;
+                        }
+                        System.out.println("Amount of the day:" +days+ " is " +STAKE);
+			amount = amount + STAKE;
+		}
+		System.out.println("total amount used during the game is:" +amount);
+    		return result;
+        }
+	public static void main(String args[])
+	{
         	System.out.println("Welcome to GamblerSimulation");   
-            	GamblerSimulation played = new GamblerSimulation();
+            	GamblerSimulation played=new GamblerSimulation();
               	played.gamblerGame();
         }
-  //return Result;
 }
 
